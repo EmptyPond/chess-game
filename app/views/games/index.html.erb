@@ -1,0 +1,23 @@
+<h1>Welcome to Knight Classes</h1>
+
+<div class='board'>
+  <% 8.downto(1) do |x| %>
+    <div class='row'>
+    <% 1.upto(8) do |y| %>
+      <% if x % 2 == 1 %>
+        <% if y % 2 == 0 %>
+          <div class='white' id=<%= "#{x}-#{y}" %>></div>
+        <% else %>
+          <div class='black' id=<%= "#{x}-#{y}" %>></div>
+        <% end %>
+      <% else %>
+        <% if y % 2 == 0 %>
+          <div class='black' id=<%= "#{x}-#{y}" %>></div>
+        <% else %>
+          <div class='white' id=<%= "#{x}-#{y}" %>></div>
+        <% end %>
+      <% end %>
+    <% end %>
+    </div>
+  <% end %>
+</div>
