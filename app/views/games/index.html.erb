@@ -6,15 +6,15 @@
     <% 1.upto(8) do |y| %>
       <% if x % 2 == 1 %>
         <% if y % 2 == 0 %>
-          <div class='white' id=<%= "#{x}-#{y}" %>></div>
+          <div class='white' id=<%= "#{y}-#{x}" %>></div>
         <% else %>
-          <div class='black' id=<%= "#{x}-#{y}" %>></div>
+          <div class='black' id=<%= "#{y}-#{x}" %>></div>
         <% end %>
       <% else %>
         <% if y % 2 == 0 %>
-          <div class='black' id=<%= "#{x}-#{y}" %>></div>
+          <div class='black' id=<%= "#{y}-#{x}" %>></div>
         <% else %>
-          <div class='white' id=<%= "#{x}-#{y}" %>></div>
+          <div class='white' id=<%= "#{y}-#{x}" %>></div>
         <% end %>
       <% end %>
     <% end %>
